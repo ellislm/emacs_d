@@ -1,0 +1,6 @@
+[submodule "s"]
+	path = s
+	url = ./s
+[submodule "dash"]
+	path = dash
+	url = ./dash
