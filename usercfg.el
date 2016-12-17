@@ -1,3 +1,4 @@
+(load-theme 'yoshi t)
 (setq inhibit-splash-screen t)
 (setq initial-scratch-message
    "
@@ -36,7 +37,7 @@
   '(progn
      (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
      (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-     (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+     (define-key evil-insert-state-map (kbd "C-SPC") 'evil-normal-state)
      (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
      (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)))
 
@@ -119,3 +120,18 @@
   (sp-local-pair "{" nil :post-handlers '(("||\n[i]" "RET")))
   (sp-local-pair "/*" "*/" :post-handlers '((" | " "SPC")
                                             ("* ||\n[i]" "RET"))))
+
+
+;;; esc always quits
+(global-set-key (kbd "C-SPC") 'keyboard-quit)
+(global-set-key (kbd "C-SPC") 'helm-keyboard-quit)
+(global-set-key (kbd "C-SPC") 'keyboard-escape-quit)
+
+(setq tramp-default-method "ssh")
+(setq x-select-enable-clipboard nil)
+(defun evil-paste-after-from-0 ()
+  (interactive)
+  (let ((evil-this-register ?0))
+    (call-interactively 'evil-paste-after)))
+
+(define-key evil-visual-state-map "p" 'evil-paste-after-from-0)

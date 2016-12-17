@@ -36,14 +36,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("9d4787fa4d9e06acb0e5c51499bff7ea827983b8bcc7d7545ca41db521bd9261" default)))
  '(package-selected-packages
    (quote
-    (smartparens evil-magit magit auctex sr-speedbar matlab-mode evil-nerd-commenter exec-path-from-shell flycheck nyan-mode evil origami solarized-theme zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
+    (yoshi-theme smartparens evil-magit magit auctex sr-speedbar matlab-mode evil-nerd-commenter exec-path-from-shell flycheck nyan-mode evil origami solarized-theme zygospore helm-gtags helm yasnippet ws-butler volatile-highlights use-package undo-tree iedit dtrt-indent counsel-projectile company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(load-theme 'solarized-dark t)
 (load-file "~/.emacs.d/usercfg.el")
